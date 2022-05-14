@@ -71,7 +71,7 @@
 		display: block!important;
 		position: relative;
 		margin-top: 0px!important;
-		background-color: #0047BB;
+		background-color: #1126ab;
 		
 	}
 	.tu-van{
@@ -142,6 +142,7 @@
 	}
 }
 @media screen and (max-width:576px){
+	
 	.info-offer h3{
 		padding: 0!important;
 	}
@@ -219,7 +220,7 @@
 		font-size: 38px;
 	}
 	.people-1 h1{
-		font-size: 38px;
+		font-size: 32px;
 	}
 	.hinhanh img{
 		padding-left: 0!important;

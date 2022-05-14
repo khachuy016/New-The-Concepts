@@ -1,24 +1,21 @@
 @charset "UTF-8";
+/* CSS Document */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 
-*{
-	box-sizing: border-box;
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
     padding: 0;
     margin: 0;
-    -webkit-tap-highlight-color: transparent!important;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
-
-
-body{
-/*	overflow-x: hidden;*/
-/*	overflow-y: hidden;*/
-/*	position: relative;*/
-}
-
 .bg-blue{
-	background-color: #0047BB;
+	background-color: #1126ab;
 }
 .text-yellow{
 	color: #FFC300;
@@ -44,16 +41,21 @@ p{
 	font-size: 16px;
 	
 }
-@media screen and (min-width: 576px){
+@media screen and (max-width: 576px){
 	p{
-		font-size: 16px!important;
+		font-size: 15px!important;
 	}
 }
 h1{
-	color: #0047BB;
+	color: #1126ab;
 }
 html{
+	
 	scroll-behavior: smooth;
+}
+body{
+	
+    overflow-x: hidden;
 }
 
 .text-light{
@@ -114,11 +116,17 @@ nav .wrapper{
 	.nav-links li a{
 		display: table;
 	}
+	.accordions{
+		width: 100%!important;
+	}
+	.awards{
+		padding-right: 0!important;
+	}
 }
 .nav-links li a{
 	position: relative;
 font-family: 'Space Grotesk', sans-serif;
-  color: #0047BB;
+  color: #1126ab;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -128,7 +136,7 @@ font-family: 'Space Grotesk', sans-serif;
 .nav-links li a:after{
 	content: "";
 	position: absolute;
-	background-color: #0D6FDC;
+	background-color: #0047bb;
 	height: 2px;
 	width: 0;
 	left: 0;
@@ -164,7 +172,33 @@ font-family: 'Space Grotesk', sans-serif;
   opacity: 1;
   visibility: visible;
 }
-
+.drop-menu li a{
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+}
+.mega-box{
+  position: absolute;
+  left: 0;
+  width: 100%;
+margin: 0 auto;
+  top: 70px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content{
+  background: #FEFEFE;
+  padding: 30px 0px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.03);
+}
+.mega-box .content .row-1{
+  width: calc(25% - 30px);
+  line-height: 50px;
+}
 .content .row-1 img{
   width: 100%;
   height: 100%;
@@ -223,6 +257,7 @@ padding: 0px 30px;
 	}
 	nav .wrapper{
  height: 70px;
+		padding: 8px 10px 0 10px;
 }
 	nav{
 		padding: 0;
@@ -246,7 +281,7 @@ padding: 0px 30px;
     box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
     transition: all 0.3s ease;
   }
-/*   custom scroll bar */
+  /* custom scroll bar */
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -294,7 +329,7 @@ padding: 0px 30px;
   }
   .nav-links .mobile-item{
 	  text-transform: uppercase;
-	  color: #0047BB;
+	  color: #1126ab;
 	  font-family: 'Space Grotesk', sans-serif;
     display: block;
     font-size: 20px;
@@ -359,7 +394,7 @@ padding: 0px 30px;
 	padding: 0;
 }
 		.logo img{
-	padding-left: 30px;
+	padding-left: 15px;
 }
 	.about-2{
 		padding: 0 15px;
@@ -378,7 +413,7 @@ padding: 0px 30px;
 	}
   .wrapper .btn{
     display: block;
-	  padding-right: 30px;
+/*	  padding-right: 30px;*/
   }
   .wrapper .nav-links{
     position: fixed;
@@ -425,7 +460,7 @@ padding: 0px 30px;
 	.nav-links li a{
 	position: relative;
 font-family: 'Space Grotesk', sans-serif;
-  color: #0047BB;
+  color: #1126ab;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -461,7 +496,7 @@ font-family: 'Space Grotesk', sans-serif;
   }
   .nav-links .mobile-item{
 	  text-transform: uppercase;
-	  color: #0047BB;
+	  color: #1126ab;
 	  font-family: 'Space Grotesk', sans-serif;
     display: block;
     font-size: 20px;
@@ -570,6 +605,7 @@ nav input{
 		display: block;
 		width: 80px;
 		margin-top: 8px;
+		margin-left: 15px;
 		
 	}
 	.box-new{
@@ -697,6 +733,7 @@ nav input{
   }
 
 }
+
 /*================================nav*/
 .banner-main{
 /*	padding: 0 15px;*/
@@ -710,7 +747,7 @@ nav input{
 }
 .banner-main h1{
 	font-size: 100px;
-	color: #0047bb!important;
+	color: #1126ab!important;
 	font-weight: bold;
 }
 /*===============banner*/
@@ -740,7 +777,7 @@ nav input{
 .about h5::after {
   content: "\2192";
 /*  font-size: 18px;*/
-	color: #0047BB;
+	color: #1126ab;
 	align-items: center;
 	margin: 8px;
 	width: 100px;
@@ -753,7 +790,7 @@ nav input{
 }
 .about a{
 	text-decoration: none;;
-	color: #0047BB;
+	color: #1126ab;
 	
 }
 .about a:hover{
@@ -786,7 +823,7 @@ nav input{
 	}
 	.about h1,
 	.about-1 h1{
-		font-size: 36px;
+		font-size: 32px;
 	}
 }
 @media screen and (max-width: 576px){
@@ -832,7 +869,7 @@ nav input{
 	width: 100%;
 }
 .box-new{
-	padding: 15px;
+/*	padding: 15px;*/
 }
 .box-2{
 	background-position: center;
@@ -944,8 +981,12 @@ nav input{
 .img-team img{
 	width: 100%;
 }
+
 .box-new{
-	padding: 15px;
+display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .box-1{
 	position: relative;
@@ -992,7 +1033,7 @@ nav input{
 .about-new a{
 	font-weight: 600;
 	font-size: 18px;
-	border-bottom: 1px solid #0047bb;
+	border-bottom: 1px solid #1126ab;
 	text-decoration: none;;
 	width: auto;
 }
@@ -1005,7 +1046,7 @@ nav input{
 
 /*=======================================form*/
 .tu-van{
-	background-color: #0A429F;
+	background-color: #1126ab;
 	align-items: center;
 	display: flex;
 }
@@ -1031,7 +1072,7 @@ nav input{
 }
 .img-form img{
 	object-fit: cover;
-	background-color: #0047BB;
+	background-color: #1126ab;
 	width: 100%;
 	height: 450px;
 }
@@ -1080,7 +1121,7 @@ nav input{
 }
 	.img-form img{
 	object-fit: cover;
-	background-color: #0047BB;
+	background-color: #1126ab;
 	width: 100%;
 	height: 350px;
 }
@@ -1135,7 +1176,7 @@ nav input{
 }
 .info-about h2{
 	font-size: 38px;
-	color: #0047bb;
+	color: #1126ab;
 }
 .legacy img{
 	width: 100%;
@@ -1152,7 +1193,7 @@ nav input{
 	max-width: 1140px;
 }
 .about-2{
-	background-color: #0047BB;
+	background-color: #1126ab;
 	height: 600px;
 	align-items: center;
 	display: flex;
@@ -1259,7 +1300,7 @@ nav input{
 		padding-top: 0!important;
 	}
 	.box-team{
-		padding: 30px 15px!important;
+		padding: 30px 0px 30px 15px!important;
 	}
 	.box-team p{
 /*		padding-top: 0!important;*/
@@ -1341,11 +1382,11 @@ nav input{
 .line-l{
 	width: 150px;
 	height: 8px;
-	background-color: #0047bb;
+	background-color: #1126ab;
 }
 .line-m{
 	width: 100%;
-	border: 0.5px solid rgba(51,57,70,.5);
+	border: 0.5px solid #6666;
 }
 
 .box-colum-2{
@@ -1535,6 +1576,9 @@ nav input{
 		padding-bottom: 15px!important;
 	}
 }
+.im-pd-top{
+	padding-right: 15px;
+}
 @media screen and (max-width: 970px){
 	.main-team h1{
 		width: 100%;
@@ -1583,6 +1627,7 @@ nav input{
 @media screen and (max-width: 1024px){
 	.im-pd-top{
 		padding-top: 15px;
+		padding-right: 0;
 	}
 	.legacy .info-about{
 		padding-left: 0px;
@@ -1688,15 +1733,15 @@ nav input{
 .offer{
 	position: relative;
 	width: 100%;
-	border-top: 1px solid #0047BB;
-	border-bottom: 1px solid #0047BB;
+	border-top: 0.5px solid #0047BB;
+	border-bottom: 0.5px solid #0047BB;
 	padding-bottom: 72px;
 }
 .info-offer{
 	display: flex;
 	flex-wrap: nowrap;
 	width: 100%;
-	border-top: 1px solid #0047bb;
+	border-top: 0.5px solid #0047bb;
 }
 .info-offer h6,
 .info-offer h3,
@@ -1704,7 +1749,7 @@ nav input{
 	padding: 20px 20px;
 }
 .info-offer h3{
-	color: #0047bb;
+	color: #1126ab;
 	font-size: 26px;
 	font-weight: 500;
 }
@@ -1731,7 +1776,7 @@ nav input{
 	padding-top: 30px;
 	padding-bottom: 30px;
 	width: 100%;
-	border-right: 1px solid #0047bb;
+	border-right: 0.5px solid #0047bb;
 	
 }
 .info-insight{
@@ -1914,7 +1959,7 @@ nav input{
 		padding-bottom: 32px!important;
 	}
 	.people-1{
-		padding: 0!important;
+		padding: 32px 0!important;
 	}
 	.container{
 		padding: 0 15px!important;
@@ -1954,7 +1999,7 @@ nav input{
 	background-position: center;
 	object-fit: cover;
 	padding: 30px 0px 72px 0px;
-	border-bottom: 1px solid #0047bb;
+	border-bottom: 0.5px solid #0047bb;
 }
 placeholder{
 	color: #FEFEFE!important;
@@ -2032,7 +2077,7 @@ button {
 }
 .heading-2 h5{
 	font-weight: 400;
-	color: #0047BB;
+	color: #1126ab;
 }
 .icon{
 	font-size: 24px;
@@ -2098,7 +2143,7 @@ button {
 	padding-bottom: 30px;
 }
 .box-team h3{
-	color: #0047BB;
+	color: #1126ab;
 	font-size: 38px;
 }
 .box-team-1 h3{
@@ -2155,7 +2200,7 @@ button {
 .process{
 	width: 100%;
 	height: auto;
-	background-color: #0A429F;
+	background-color: #1126ab;
 }
 .info-process h1{
 /*	padding-bottom: 25px;*/
@@ -2257,7 +2302,7 @@ button {
 }
 
 .text-blue{
-	color: #0047bb;
+	color: #1126ab;
 }
 .m-7{
 	font-size: 16.5px;
@@ -2266,7 +2311,7 @@ button {
 }
 .form-group input{
 	border:none;
-	border-bottom: 1px solid #0047bb;
+	border-bottom: 0.5px solid #0047bb;
 	
 }
 @media screen and (max-width:576px){
@@ -2388,12 +2433,6 @@ button {
 /*		margin-bottom:  32px;*/
 	}
 }
-
-
-
-
-
-
 
 
 
